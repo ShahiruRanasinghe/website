@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name=viewport contenet="width=device-width,initial-scale=1">
+    <meta name="description" content="This should describe what the web site about and contain words people usually search on">
+    <title>BOOKINGS</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <script src="../JAVA SCRIPT/main.js" defer></script>
+</head>
+<body>
+    <header>
+       <a href="../HTML/home.html"> <img src="../images/original-logo.jpg" class="logo" alt="logo"></a>
+       <p class="topic">HOTEL ROYAL WOODLAND</p>
+    </header>
+<!--NAV BAR--------------------------------------------------------------------------------------------------------->    
+ <nav class="navbar">
+   
+    <ul class="nav-list">
+        <li><a href="../HTML/home.html" >HOME</a></li>
+        <li><a href="../HTML/branches.html">BRANCHES</a></li>
+        <li><a href="../HTML/adventure.html">ADVENTURE</a></li>
+        <div class="dropdown">
+            <button class="dropbtn"><a href="../HTML/restaurant.html">RESTAURANT</a>
+            </button>
+            <div class="dropdown-content">
+              <a href="../HTML/event01.html">CORPORATE EVENTS</a>
+              <a href="../HTML/event02.html">PRIVATE EVENTS</a>
+            </div>
+          </div>
+        <li><a href="#" class="active">BOOKINGS</a></li>
+    </ul>
+</nav>
+<!--MAIN IMAGE------------------------------------------------->
+<div class="hero-7"></div>
+
+<!--HOTEL BOOKINGS----------------------------------------------------------------------------------------------->
+<div class="book-in">
+    <h1 class="hotel-book"><u>HOTEL BOOKINGS.</u></h1>
+    <table class="form-table">
+      <form id="bookingForm">
+        <tr>
+            <td><label>First name:</label></td>
+            <td><input type="text" name="fname" size="25" maxlength="35" id="firstName_hb" recquired></td>
+        </tr>
+        <tr>
+            <td><label>Last name:</label></td>
+            <td><input type="text" name="lname" size="25" maxlength="35" id="lastName_hb" recquired></td>
+        </tr>
+        <tr>
+            <td><label>Email:</label></td>
+            <td><input type="email" name="email" size="25" maxlength="35" id="email_hb" recquired></td>
+        </tr>
+        <tr>
+            <td><label>Choice of hotel</label></td>
+            <td><select name="hotelType" id="hotelType" >
+                <option>Sun and sand haven-royal woodlanad</option>
+                <option>Crystalpeak-hotel royal woodland</option>
+                <option>Enchanted woods inn-royal woodland</option>
+            </select></td>
+        </tr>
+    
+    
+        <tr>
+            <td><label>Number of children(above 5 years):</label></td>
+            <td><input type="text" name="children" size="25" maxlength="35" id="no_child"></td>
+        </tr>
+        <tr>
+            <td><label>Number of adults:</label></td>
+            <td><input type="text" name="adults" size="25" maxlength="35" id="no_adults"></td>
+        </tr>
+        <tr>
+            <td>Room type</td>
+            <td>
+                <input type="radio" name="roomType" id="single" value="single">
+                <label for="small">Single</label>
+            
+            <p>
+                <input type="radio" name="roomType" id="double" value="double" checked>
+                <label for="medium">Double</label>
+            </p>
+            <p>
+                <input type="radio" name="roomType" id="triple" value="triple">
+                <label for="large">Triple</label></td>
+        </tr>    
+        <tr>
+            <td><label>Number of rooms:</label></td>
+            <td><input type="text" name="no_rooms" size="25" maxlength="35" id="numRooms_hb" recquired></td>
+        </tr>
+        <tr>
+            <td><label>Number of nights:</label></td>
+            <td><input type="text" name="duration" size="25" maxlength="35" id="duration"></td>
+        </tr>
+        
+        <tr>
+            <td><label>Extra requirements:</label></td>
+            <td>
+                <input type="checkbox" name="extras" id="wifi" value="wifi" >WIFI <br>
+                <input type="checkbox" name="extras" id="pool" value="pool">Pool view <br>
+                <input type="checkbox" name="extras" id="garden" value="garden">Garden view <br>
+                <input type="checkbox" name="extras" id="extraBeds" value="extraBeds">Extra beds
+            </td>
+        </tr>
+        
+        <!-- New elements for loyalty points and promo code -->
+        <tr>
+          <td><label for="loyaltyPoints">Loyalty Points:</label></td>
+          <td><input type="text" name="loyaltyPoints" id="loyaltyPoints"></td>
+        </tr>
+        <tr>
+          <td><label for="promoCode">Promo Code:</label></td>
+          <td><input type="text" name="promoCode" id="promoCode"></td>
+        </tr>
+        <!-- Submit button -->
+        <tr>
+            <td colspan="2"><button type="button" class="submit_button" id="submitBTN">BOOK NOW</button><button type="button" class="favourites_button" id="toFavourites">ADD TO FAVOURITES</button>
+                <button type="button" class="loyalty_points" id="checkLoyaltyPonints">CHECK LOYALTY POINTS</button></td>
+            
+            
+        </tr>
+
+        <!-- Display booking information -->
+        <tr>
+          <td colspan="2"><h2>Booking Information</h2></td>
+        </tr>
+        <tr>
+          <td><label>Current Booking(s):</label></td>
+          <td><p id="currentBooking"></p></td>
+        </tr>
+        <tr>
+          <td><label>Cost of Current Booking(s):</label></td>
+          <td><p id="costOfCurrentBooking"></p></td>
+        </tr>
+        
+        <tr>
+          <td><label>Overall Booking:</label></td>
+          <td><p id="overallBooking"></p></td>
+        </tr>
+        <tr>
+          <td><label>Overall Cost of Booking:</label></td>
+          <td><p id="overallCost"></p></td>
+        </tr>
+        <tr>
+            <td><h3>Loyalty points:</h3></td>
+            <td><h3 id="loyaltyDisplay"></h3></td>
+        </tr>
+       
+      </form>
+    </table>
+
+<!--ADVENTURE BOOKING------------------------------------------------------------------------------------------------------------->
+        <div class="book-in">
+            <h1 class="hotel-book"><u>ADVENTURE BOOKINGS</u></h1>
+            <table class="form-table">
+              <form id="bookingForm">
+                <tr>
+                    <td><label>Name:</label></td>
+                    <td><input type="text" name="name_adven" id="name_adven"></td>
+                </tr>
+                <tr>
+                    <td><label>Email:</label></td>
+                    <td><input type="email" name="email_adven" id="email_adven"></td>
+                </tr>
+                <tr>
+                    <td><label>Number of children:</label></td>
+                    <td><input type="number" name="noChild_adven" id="noChild_adven"></td>
+                </tr>
+                <tr>
+                    <td><label>Number of adults:</label></td>
+                    <td><input type="number" name="noAdult_adven" id="noAdult_adven"></td>
+                </tr>
+                <tr>
+                    <td><label>Number of days:</label></td>
+                    <td><input type="number" name="noDays_adven" id="noDays_adven"></td>
+                </tr>
+                <!-- Adventure Booking Section -->
+                <tr>
+                    <td>Adventure type:</td>
+                    <td>
+                        <input type="radio" name="adventureType" id="localAdult" value="localAdult" checked>
+                        <label>Diving for Local Adults (1 hr) - 5000LKR</label>
+                    <p>
+                        <input type="radio" name="adventureType" id="localKids" value="localKids">
+                        <label>Diving for Local Kids (above 5 years) - 2000LKR</label></p>
+                    <p>
+                        <input type="radio" name="adventureType" id="foreignAdult" value="foreignAdult">
+                        <label>Diving for Foreign Adults - 10000LKR</label></p>
+                    <p>
+                        <input type="radio" name="adventureType" id="foreignKid" value="foreignKid">
+                        <label>Diving for Foreign Kids - 5000LKR</label></td></p>
+                </tr>    
+
+                <tr>
+                    <td><label>Need a Guide?</label></td>
+                    <td><input type="checkbox" name="guide" id="guide" value="anGuide"> Yes</td>
+                </tr>
+                
+                <!-- Book Adventure Button -->
+                <tr>
+                    <td colspan="2"><button type="button" id="bookNow" class="bookAdventure">BOOK NOW</button>
+                        <button type="button" id="bookAdventure" class="bookAdventure">BOOK ADVENTURE</button>
+                        <button type="button" id="addToFavourites" class="bookAdventure">ADD TO FAVOURITES</button>
+                    </td>
+                   
+                </tr>
+                <tr>
+                
+                    <td colspan="2"><h2>Booking Information</h2></td>
+                </tr>
+        
+        
+                
+                <!-- Output Area for Adventure Booking -->
+                <tr>
+                    <td><label>Current Bookings:</label></td>
+                    <td colspan="2"><p id="currentBookings_adven"></p></td>
+                </tr>
+                <tr>
+                    <td><label>Current bookings cost:</label></td>
+                    <td colspan="2"><p id="currentBookingsCost_adven"></p></td>
+                </tr>
+                <tr>
+                    <td><label>Overall Bookings:</label></td>
+                    <td colspan="2"><p id="overallBookings_adven"></p></td>
+                </tr>
+                <tr>
+                    <td><label>Overall bookings cost:</label></td>
+                    <td colspan="2"><p id="overallBookingsCost_adven"></p></td>
+                </tr>
+
+                
+               
+        
+              </form>
+            </table>
+          </div>
+
+      </form>
+    </table>
+    </div>
+
+
+
+<!--FOOTER-------------------------------------------------------------------------------------->
+    
+    <footer>
+        <div class="containF">
+            
+            <div class="center-content">
+                <h4>Quick links</h4>
+                <ul>
+                    <li><a href="../HTML/home.html">&cir;Home</a></li>
+                    <li><a href="../HTML/branches.html">&cir;Branches</a></li>
+                    <li><a href="../HTML/adventure.html">&cir;Adventure</a></li>
+                    <li><a href="../HTML/restaurant.html">&cir;Restaurant</a></li>
+                    <li><a href="../HTML/event01.html">&cir;Corporate events</a></li>
+                    <li><a href="../HTML/event02.html">&cir;Private Events</a></li>
+                    <li><a href="../HTML/booking.html">&cir;Bookings</a></li>
+                </ul>
+            </div>
+            <p class="footer-note">2023 all rights reserved by hotelroyalwoodland</p>      
+        </div>
+        
+    </footer>
+
+</body>
+</html>
